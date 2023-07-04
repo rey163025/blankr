@@ -1,7 +1,8 @@
 import webbrowser
 
 
-def google(web: str, path: str):
+def google(web: str, path = 'open -a /Applications/Google\ Chrome.app  %s'):
     webbrowser.get(path).open(web)
 
-google('https://www.google.com/', 'open -a /Applications/Google\ Chrome.app  %s')
+
+google('https://www.google.com/')
