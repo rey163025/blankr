@@ -1,8 +1,11 @@
 import webbrowser
 
 
-def google(web=str(input()), path='open -a /Applications/Google\ Chrome.app  %s'):
-    webbrowser.get(path).open(web)
+def google(web, path='open -a /Applications/Google\ Chrome.app  %s'):
+    if not isinstance(web, str):
+        raise ValueError('Принимается только str')
+    else:
+        webbrowser.get(path).open(web)
 
 
-google()
+google(input())
