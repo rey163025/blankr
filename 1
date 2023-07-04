@@ -1,0 +1,10 @@
+import webbrowser
+
+
+def google(web: str):
+    url = web
+    path = 'open -a /Applications/Google\ Chrome.app  %s'
+    webbrowser.get(path).open(url)
+
+
+google('https://www.google.com/')
