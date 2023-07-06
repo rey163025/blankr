@@ -1,14 +1,12 @@
+import datetime
 import os
-import time
-
 
 def file_info():
     desktop = os.path.join(os.path.expanduser("~"), "Desktop")
-    list_of_files = os.listdir(desktop)
 
-    for file in list_of_files:
+    for file in os.listdir(desktop):
         print(f"Name: {file} # Path: {os.path.join(desktop, file)} # Size: {os.path.getsize(os.path.join(desktop, file))} bytes \
-# Creation date: {time.ctime(os.path.getctime(os.path.join(desktop, file)))}")
+# Creation date: {datetime.date.fromtimestamp(os.path.getmtime(os.path.join(desktop,file)))}")
 
 
 file_info()
