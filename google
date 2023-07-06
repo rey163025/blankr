@@ -2,11 +2,14 @@ import webbrowser
 
 
 def google(web):
-    if not web.startswith('https://'):
-        raise ValueError('NOT URL')
-    else:
-        path = 'open -a /Applications/Google\ Chrome.app  %s'
-        webbrowser.get(path).open(web)
+    while True:
+        if web.startswith('https://'):
+            path = 'open -a /Applications/Google\ Chrome.app  %s'
+            webbrowser.get(path).open(web)
+            break
+        else:
+            print('NOT URL')
+            web = input()
 
 
 google(input())
