@@ -6,7 +6,7 @@ def file_info():
 
     for file in os.listdir(desktop):
         print(f"Name: {file} # Path: {os.path.join(desktop, file)} # Size: {os.path.getsize(os.path.join(desktop, file))} bytes \
-# Creation date: {datetime.date.fromtimestamp(os.path.getmtime(os.path.join(desktop,file)))}")
+# Creation date: {datetime.date.fromtimestamp(os.path.getctime(os.path.join(desktop,file)))}")
 
 
 file_info()
