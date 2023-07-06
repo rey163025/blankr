@@ -8,7 +8,7 @@ def file_info():
 
     for file in list_of_files:
         print(f"Name: {file} # Path: {os.path.join(desktop, file)} # Size: {os.path.getsize(os.path.join(desktop, file))} bytes \
-    # Creation date: {time.ctime(os.path.getctime(os.path.join(desktop, file)))}")
+# Creation date: {time.ctime(os.path.getctime(os.path.join(desktop, file)))}")
 
 
 file_info()
